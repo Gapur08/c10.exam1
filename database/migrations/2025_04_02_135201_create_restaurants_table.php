@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('restau', function (Blueprint $table) {
+        Schema::create('restaurants', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('city_id')->constrained();
-            $table->string('name');
-            $table->string('address');
+            $table->foreignId('city_id')->nullable()->constrained('cities')->cascadeOnDelete();
+            $table->string('name', 255);
+            $table->string('address', 255);
             $table->text('description');
-            $table->timestamps();
+
         });
     }
 
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('restau');
+        Schema::dropIfExists('restaurants');
     }
 };

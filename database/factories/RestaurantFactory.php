@@ -21,9 +21,7 @@ class RestaurantFactory extends Factory
             'city_id' => City::inRandomOrder(),
             'name' => $this->faker->company(),
             'address' => $this->faker->address(),
-            'description' => $this->faker->paragraph(),
-            ;
-            //
+            'description' => $this->faker->paragraph()
         ];
     }
 }

@@ -23,8 +23,7 @@ class ReservationFactory extends Factory
             'restaurant_id' => Restaurant::inRandomOrder()->first()->id,
             'date' => $this->faker->dateTimeBetween(),
             'time' => $this->faker->time('H:i'),
-            'guest_count' => $this->faker->numberBetween(1,10),
-            //
+            'guest_count' => $this->faker->numberBetween(1,10)
         ];
     }
 }

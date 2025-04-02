@@ -19,7 +19,7 @@ class ProductFactory extends Factory
     public function definition(): array
     {
         return [
-            'restau_id' => Restaurant::inRandomOrder(),
+            'restaurant_id' => Restaurant::inRandomOrder(),
             'category_id' => Category::inRandomOrder(),
             'name' => $this->faker->words(3, true),
             'description' => $this->faker->sentence(),
