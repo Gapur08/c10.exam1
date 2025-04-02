@@ -12,6 +12,11 @@ class CitySeeder extends Seeder
      */
     public function run(): void
     {
+        $cities = ['Ashgabat','Anew','Mary','Arkadag'];
+
+        foreach ($cities as $city) {
+            City::create(['name' => $city]);
+        }
         //
     }
 }
